@@ -18,7 +18,7 @@ class UpdateProfileService {
     @inject('UsersRepository')
     private usersRepository: IUsersRepository,
 
-    @inject('StorageProvider')
+    @inject('HashProvider')
     private hashProvider: IHashProvider,
   ) {}
 
@@ -51,13 +51,13 @@ class UpdateProfileService {
     }
 
     if (password && old_password) {
-      const checkOldPassowrd = await this.hashProvider.compareHash(
+      const checkOldPassword = await this.hashProvider.compareHash(
         old_password,
         user.password,
       );
 
-      if (!checkOldPassowrd) {
-        throw new AppError('Wrong old password');
+      if (!checkOldPassword) {
+        throw new AppError('Old password does not match.');
       }
 
       user.password = await this.hashProvider.generateHash(password);
