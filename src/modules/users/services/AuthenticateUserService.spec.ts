@@ -1,20 +1,17 @@
 import 'reflect-metadata';
 import AppError from '../../../shared/errors/AppError';
 import AuthenticateUserService from './AuthenticateUserService';
-import CreateUserService from './CreateUserService';
 import FakeUsersRepository from '../repositories/fakes/FakeUsersRepository';
 import FakeHashProvider from '../providers/HashProvider/fakes/FakeHashProvider';
 
 let fakeUsersRepository: FakeUsersRepository;
 let fakeHashProvider: FakeHashProvider;
-let createUser: CreateUserService;
 let autheticateUser: AuthenticateUserService;
 
 describe('AthenticatedUser', () => {
   beforeEach(() => {
     fakeUsersRepository = new FakeUsersRepository();
     fakeHashProvider = new FakeHashProvider();
-    createUser = new CreateUserService(fakeUsersRepository, fakeHashProvider);
     autheticateUser = new AuthenticateUserService(
       fakeUsersRepository,
       fakeHashProvider,
@@ -22,7 +19,7 @@ describe('AthenticatedUser', () => {
   });
 
   it('should be able to autheticate', async () => {
-    const user = await createUser.execute({
+    const user = await fakeUsersRepository.create({
       name: 'Marcos Souza',
       email: 'marcospsw96@gmail.com',
       password: '123456789',
@@ -47,7 +44,7 @@ describe('AthenticatedUser', () => {
   });
 
   it('should be able to autheticate with wrong password', async () => {
-    await createUser.execute({
+    await fakeUsersRepository.create({
       name: 'Marcos Souza',
       email: 'marcospsw96@gmail.com',
       password: '123456789',
