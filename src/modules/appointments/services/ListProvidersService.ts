@@ -1,5 +1,6 @@
 import { inject, injectable } from 'tsyringe';
 import ICacheProvider from '@shared/container/providers/CacheProvider/models/ICacheProvider';
+import { classToClass } from 'class-transformer';
 import IUsersRepository from '../../users/repositories/IUsersRepository';
 import User from '../../users/infra/typeorm/entities/User';
 
@@ -29,7 +30,10 @@ class ListProvidersService {
 
       console.log('A query no banco de dados foi feita');
 
-      await this.cacheProvider.save(`providers-list:${user_id}`, users);
+      await this.cacheProvider.save(
+        `providers-list:${user_id}`,
+        classToClass(users),
+      );
     }
 
     return users;
