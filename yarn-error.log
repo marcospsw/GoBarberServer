@@ -1,30 +1,30 @@
 Arguments: 
-  /usr/bin/node /usr/share/yarn/bin/yarn.js add .env
+  /home/marcos/.nvm/versions/node/v13.6.0/bin/node /usr/share/yarn/bin/yarn.js add babel-plugin-decorators-legacy -D
 
 PATH: 
-  /home/marcos/.zinit/polaris/sbin:/home/marcos/.zinit/polaris/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin
+  /home/marcos/.nvm/versions/node/v13.6.0/bin:/home/marcos/.zinit/polaris/sbin:/home/marcos/.zinit/polaris/bin:/home/marcos/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin:/home/marcos/Android/Sdk/emulator:/home/marcos/Android/Sdk/tools:/home/marcos/Android/Sdk/tools/bin:/home/marcos/Android/Sdk/platform-tools:/home/marcos/android-studio/bin:/home/marcos/Android/Sdk/emulator:/home/marcos/Android/Sdk/tools:/home/marcos/Android/Sdk/tools/bin:/home/marcos/Android/Sdk/platform-tools:/home/marcos/android-studio/bin
 
 Yarn version: 
   1.22.5
 
 Node version: 
-  14.15.1
+  13.6.0
 
 Platform: 
   linux x64
 
 Trace: 
-  Error: https://registry.yarnpkg.com/.env: Not found
+  Error: https://registry.yarnpkg.com/babel-plugin-decorators-legacy: Not found
       at Request.params.callback [as _callback] (/usr/share/yarn/lib/cli.js:66988:18)
       at Request.self.callback (/usr/share/yarn/lib/cli.js:140749:22)
-      at Request.emit (events.js:315:20)
+      at Request.emit (events.js:321:20)
       at Request.<anonymous> (/usr/share/yarn/lib/cli.js:141721:10)
-      at Request.emit (events.js:315:20)
+      at Request.emit (events.js:321:20)
       at IncomingMessage.<anonymous> (/usr/share/yarn/lib/cli.js:141643:12)
-      at Object.onceWrapper (events.js:421:28)
-      at IncomingMessage.emit (events.js:327:22)
-      at endReadableNT (_stream_readable.js:1327:12)
-      at processTicksAndRejections (internal/process/task_queues.js:80:21)
+      at Object.onceWrapper (events.js:427:28)
+      at IncomingMessage.emit (events.js:333:22)
+      at endReadableNT (_stream_readable.js:1220:12)
+      at processTicksAndRejections (internal/process/task_queues.js:84:21)
 
 npm manifest: 
   {
@@ -41,7 +41,7 @@ npm manifest:
     },
     "dependencies": {
       "@types/redis": "^2.8.20",
-      "aws-sdk": "^2.673.0",
+      "aws-sdk": "^2.812.0",
       "bcryptjs": "^2.4.3",
       "celebrate": "^13.0.4",
       "class-transformer": "^0.2.3",
@@ -51,9 +51,9 @@ npm manifest:
       "express": "^4.17.1",
       "express-async-errors": "^3.1.1",
       "handlebars": "^4.7.6",
-      "ioredis": "^4.16.3",
+      "ioredis": "^4.19.4",
       "jsonwebtoken": "^8.5.1",
-      "mime": "^2.4.5",
+      "mime": "^2.4.7",
       "mongodb": "^3.6.3",
       "multer": "^1.4.2",
       "mysql": "^2.14.1",
@@ -1853,10 +1853,10 @@ Lockfile:
     resolved "https://registry.yarnpkg.com/atob/-/atob-2.1.2.tgz#6d9517eb9e030d2436666651e86bd9f6f13533c9"
     integrity sha512-Wm6ukoaOGJi/73p/cl2GvLjTI5JM1k/O14isD73YML8StrH/7/lRFgmg8nICZgD3bZZvjwCGxtMOD3wWNAu8cg==
   
-  aws-sdk@^2.673.0:
-    version "2.788.0"
-    resolved "https://registry.yarnpkg.com/aws-sdk/-/aws-sdk-2.788.0.tgz#020f84975db9623d0a434105991e7074c488693f"
-    integrity sha512-UKc+4MFRezIkgk668mylj7MpVD2dCtiDBppgx05SwYSDGT60bixrKv3nE/YJK+gAv53CWVf7WL6hNv76+TWkTA==
+  aws-sdk@^2.812.0:
+    version "2.812.0"
+    resolved "https://registry.yarnpkg.com/aws-sdk/-/aws-sdk-2.812.0.tgz#c7dc1690eb8df4d66e039a524487136254e81694"
+    integrity sha512-8usszPY2AGtC0+bO2iJY9u3DILsW8g+zzfumYQxQqMTc0C4vMJKi52Yuh22mP9Nm1DCNfFlHNbdQMJfKlRLaTA==
     dependencies:
       buffer "4.9.2"
       events "1.1.1"
@@ -3837,10 +3837,10 @@ Lockfile:
       strip-ansi "^6.0.0"
       through "^2.3.6"
   
-  ioredis@^4.16.3:
-    version "4.19.2"
-    resolved "https://registry.yarnpkg.com/ioredis/-/ioredis-4.19.2.tgz#e3eab394c653cea5aea07c0c784d8c772dce8801"
-    integrity sha512-SZSIwMrbd96b7rJvJwyTWSP6XQ0m1kAIIqBnwglJKrIJ6na7TeY4F2EV2vDY0xm/fLrUY8cEg81dR7kVFt2sKA==
+  ioredis@^4.19.4:
+    version "4.19.4"
+    resolved "https://registry.yarnpkg.com/ioredis/-/ioredis-4.19.4.tgz#11112005f87ad3acac247ada3b22eb31b947f7c7"
+    integrity sha512-3haQWw9dpEjcfVcRktXlayVNrrqvvc2io7Q/uiV2UsYw8/HC2YwwJr78Wql7zu5bzwci0x9bZYA69U7KkevAvw==
     dependencies:
       cluster-key-slot "^1.1.0"
       debug "^4.1.1"
@@ -5021,10 +5021,10 @@ Lockfile:
     resolved "https://registry.yarnpkg.com/mime/-/mime-1.6.0.tgz#32cd9e5c64553bd58d19a568af452acff04981b1"
     integrity sha512-x0Vn8spI+wuJ1O6S7gnbaQg8Pxh4NNHb7KSINmEWKiPE4RKOplvijn+NkmYmmRgP68mc70j2EbeTFRsrswaQeg==
   
-  mime@^2.4.5:
-    version "2.4.6"
-    resolved "https://registry.yarnpkg.com/mime/-/mime-2.4.6.tgz#e5b407c90db442f2beb5b162373d07b69affa4d1"
-    integrity sha512-RZKhC3EmpBchfTGBVb8fb+RL2cWyw/32lshnsETttkBAyAUXSGHxbEJWWRXc751DrIxG1q04b8QwMbAwkRPpUA==
+  mime@^2.4.7:
+    version "2.4.7"
+    resolved "https://registry.yarnpkg.com/mime/-/mime-2.4.7.tgz#962aed9be0ed19c91fd7dc2ece5d7f4e89a90d74"
+    integrity sha512-dhNd1uA2u397uQk3Nv5LM4lm93WYDUXFn3Fu291FJerns4jyTudqhIWe4W04YLy7Uk1tm1Ore04NpjRvQp/NPA==
   
   mimic-fn@^2.1.0:
     version "2.1.0"
