@@ -45,10 +45,9 @@ jobs:
           username: ${{ secrets.SSH_USER }}
           port: ${{ secrets.SSH_PORT }}
           key: ${{secrets.SSH_KEY}}
-          source: "."
+          source: ".,!node_modules"
           target: "~/GoBarberServer"
         
-      # Substituir codigo existente na pasta dist pelo novo codigo
       # Executar Yarn na DigitalOcean
       # Executar Migrations
       # Restart no servidor Node.Js
